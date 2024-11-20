@@ -4,6 +4,30 @@
     font-style: normal;
   }
 
+@keyframes maSuperAnimation{
+    0% {
+        transform: translate(0%,0%);
+    }
+    17% {
+        transform: translate(0%,100%);
+    }
+    34%{
+        transform: translate(-100%,0%);
+    }
+    51%{
+        transform: translate(0%,-100%);
+    }
+    68%{
+        transform: translate(100%,0%);
+    }
+    85%{
+        transform: translate(0%,100%);
+    }
+    100% {
+        transform: translate(0%,0%);
+    }
+}
+
 body{
     width : 100%;
     margin : 0;
@@ -131,22 +155,6 @@ section{
     }
 }
 
-
-/*#losange{
-    background-image: url(.././images/losange.webp);
-    background-color: red;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display : flex;
-    width : 20%;
-        #choixpeau{
-            width : 30%;
-            margin : auto;
-            margin-top : 50%;
-            margin-bottom : 50%;
-        }
-}*/
-
 #right{
     width : 50%;
     background-image: url(.././images/losange.webp);
@@ -161,6 +169,11 @@ section{
         height: fit-content;
         margin: auto;
         margin-bottom : 0;
+        transition: transform 500ms linear 500ms; 
+        &:hover{
+            animation: maSuperAnimation 8s;
+        }
+        
     }
     p{
         color: white;
